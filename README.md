@@ -4,9 +4,9 @@ Getting started:
 https://www.youtube.com/watch?v=OgdpC35qHc0
 
 Full:
-https://www.youtube.com/playlist?list=PLM5JAv_WpgH_FKWlsGkbiKUczG4BU8mv5
-https://www.youtube.com/playlist?list=PL6n9fhu94yhVm6S8I2xd6nYz2ZORd7X2v
-https://www.youtube.com/watch?v=E7Voso411Vs
+- https://www.youtube.com/playlist?list=PLM5JAv_WpgH_FKWlsGkbiKUczG4BU8mv5
+- https://www.youtube.com/playlist?list=PL6n9fhu94yhVm6S8I2xd6nYz2ZORd7X2v
+- https://www.youtube.com/watch?v=E7Voso411Vs
 
 # Setup
 
