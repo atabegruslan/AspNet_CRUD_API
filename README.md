@@ -14,6 +14,8 @@ Full:
 - Visual Studio 2019 version https://visualstudio.microsoft.com/downloads/
 - Install VS features
 
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/Download%20VS%20features.png)
+
 In this project EF is used for ORM
 
 More refs:
