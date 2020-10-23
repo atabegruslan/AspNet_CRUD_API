@@ -18,7 +18,7 @@ namespace TravelBlog.Controllers
         {
             var destinations = (
                 from d in _db.Destinations 
-                join c in _db.Countries on d.CountryId equals c.Id 
+                //join c in _db.Countries on d.CountryId equals c.Id  /* 2. 2 tables - no FK defined in DB */
                 select new DestinationCountry
                 {
                     Id=d.Id,
@@ -36,12 +36,26 @@ namespace TravelBlog.Controllers
         // GET: Home/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var destination = (from d in _db.Destinations where d.Id == id
+                               select new DestinationCountry
+                               {
+                                   Id = d.Id,
+                                   Name = d.Name,
+                                   Description = d.Description,
+                                   CountryName = d.Country.Name 
+                               }).First();
+
+            return View(destination);
         }
 
         // GET: Home/Create
         public ActionResult Create()
         {
+            List<Country> list = _db.Countries.ToList();
+            ViewData["CountryList"] = new SelectList(list, "Id", "Name");
+            //ViewData["CountryId"] = new SelectList(list, "Id", "Name");
+            // https://stackoverflow.com/questions/2849341/there-is-no-viewdata-item-of-type-ienumerableselectlistitem-that-has-the-key
+
             return View();
         }
 
@@ -51,9 +65,6 @@ namespace TravelBlog.Controllers
         {
             if (!ModelState.IsValid)
                 return View();
-
-            List<Country> list = _db.Countries.ToList();
-            ViewBag.CountryList = new SelectList(list, "Id", "Name");
 
             _db.Destinations.Add(destinationToCreate);
             _db.SaveChanges();

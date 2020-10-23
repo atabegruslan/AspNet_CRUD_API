@@ -27,5 +27,7 @@ namespace TravelBlog.Models
     
         public virtual DbSet<Destination> Destinations { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+
+        public System.Data.Entity.DbSet<TravelBlog.ViewModels.DestinationCountry> DestinationCountries { get; set; }
     }
 }
