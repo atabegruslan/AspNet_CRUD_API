@@ -10,6 +10,10 @@ Full:
 
 # Setup
 
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/Create%20NET%20core%20or%20NET%20project%201.png)
+
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/Create%20NET%20core%20or%20NET%20project%202.png)
+
 - Have .NET Framework 4.x.x installed first: https://www.microsoft.com/en-us/download/details.aspx?id=30653
 - Visual Studio 2019 version https://visualstudio.microsoft.com/downloads/
 - Install VS features
