@@ -69,6 +69,8 @@ namespace TravelBlog.Controllers
             _db.Destinations.Add(destinationToCreate);
             _db.SaveChanges();
 
+            //var lastInsertId = destinationToCreate.Id;
+
             return RedirectToAction("Index");
         }
 
