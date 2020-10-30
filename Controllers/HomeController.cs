@@ -104,18 +104,24 @@ namespace TravelBlog.Controllers
         }
 
         // POST: Home/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult ConfirmDelete(int id)
         {
+            // https://www.youtube.com/watch?v=G4i3-87cavk&list=PL6n9fhu94yhVm6S8I2xd6nYz2ZORd7X2v&index=24
+            // https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/examining-the-details-and-delete-methods
             try
             {
-                // TODO: Add delete logic here
+                var destination = _db.Destinations.Find(id);
+
+                _db.Destinations.Remove(destination);
+                _db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                //return View();
+                return RedirectToAction("Index");
             }
         }
     }
