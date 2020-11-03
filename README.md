@@ -22,6 +22,13 @@ Full:
 
 In this project EF is used for ORM
 
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/EF.PNG)
+
+- An example of DB first: https://www.entityframeworktutorial.net/entityframework6/create-entity-data-model.aspx
+- An example of linking Code and DB without using the wizard: https://github.com/atabegruslan/ASP-NET-MVC-Entity
+
+ADO.NET is the traditional method to help access DB with C#.
+
 More refs:
 - https://www.dotnettricks.com/learn/entityframework/difference-between-linq-to-sql-and-entity-framework
 - https://stackoverflow.com/questions/3293995/what-is-the-difference-between-entity-framework-and-linq-to-sql-by-net-4-0
