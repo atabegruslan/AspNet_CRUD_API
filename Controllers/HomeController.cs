@@ -79,6 +79,9 @@ namespace TravelBlog.Controllers
         {
             var destinationToEdit = (from d in _db.Destinations where d.Id == id select d).First();
 
+            List<Country> list = _db.Countries.ToList();
+            ViewData["CountryList"] = new SelectList(list, "Id", "Name", destinationToEdit.Id);
+
             return View(destinationToEdit);
         }
 
