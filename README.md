@@ -20,6 +20,16 @@ Full:
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/Download%20VS%20features.png)
 
+## Databases
+
+If you don't have MsSQL server installed, you can still use the local DB server:
+
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/localDB.png)
+
+Here's how to have MsSQL server and MsSQL server management studio: https://www.guru99.com/download-install-sql-server.html
+
+# ORM
+
 In this project EF is used for ORM
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/EF.PNG)
@@ -37,6 +47,10 @@ More refs:
 - https://www.geeksforgeeks.org/difference-between-ado-and-ado-net/
 - https://www.quora.com/Which-ORM-framework-is-best-for-NET
 - https://stackoverflow.com/questions/657220/which-is-the-best-data-access-framework-approach-for-c-sharp-and-net
+
+# Publish
+
+![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/publish.png)
 
 # More Tutorials
 
