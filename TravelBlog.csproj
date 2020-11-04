@@ -153,6 +153,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DestinationsDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>DestinationsDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DestinationCountry.cs" />
   </ItemGroup>
@@ -217,6 +220,7 @@
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

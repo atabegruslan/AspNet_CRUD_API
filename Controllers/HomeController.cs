@@ -16,6 +16,11 @@ namespace TravelBlog.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+
             var destinations = (
                 from d in _db.Destinations 
                 //join c in _db.Countries on d.CountryId equals c.Id  /* 2. 2 tables - no FK defined in DB */
@@ -126,6 +131,35 @@ namespace TravelBlog.Controllers
                 //return View();
                 return RedirectToAction("Index");
             }
+        }
+
+        // UAC
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _db.Users.Where(
+                        u => u.Username.Equals(user.Username) && u.Password.Equals(user.Password)
+                    ).FirstOrDefault();
+                
+                if (result != null)
+                {
+                    Session["UserID"] = result.Id.ToString();
+                    Session["UserName"] = result.Username.ToString();
+
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return View(user);
         }
     }
 }

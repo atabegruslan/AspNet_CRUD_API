@@ -21,6 +21,14 @@
           <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CountryId" Type="int" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <Association Name="FK_Destinations_Countries">
           <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
           <End Role="Destinations" Type="Self.Destinations" Multiplicity="*" />
@@ -36,6 +44,7 @@
         <EntityContainer Name="TravelBlogModelsStoreContainer">
           <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Destinations" EntityType="Self.Destinations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Destinations_Countries" Association="Self.FK_Destinations_Countries">
             <End Role="Countries" EntitySet="Countries" />
             <End Role="Destinations" EntitySet="Destinations" />
@@ -62,6 +71,7 @@
             <End Role="Country" EntitySet="Countries" />
             <End Role="Destination" EntitySet="Destinations" />
           </AssociationSet>
+          <EntitySet Name="Users" EntityType="TravelBlog.Models.User" />
         </EntityContainer>
         <EntityType Name="Country">
           <Key>
@@ -83,6 +93,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -103,6 +121,15 @@
             <EntityTypeMapping TypeName="TravelBlog.Models.Country">
               <MappingFragment StoreEntitySet="Countries">
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TravelBlog.Models.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

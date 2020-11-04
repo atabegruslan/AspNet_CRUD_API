@@ -6,11 +6,12 @@
 
 <h2>Create</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
+    @* <form id="ajaxForm"> *@
+
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Destination</h4>
         <hr />
@@ -43,9 +44,12 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+                @* <input id="ajaxSubmit" type="button" value="Create" class="btn btn-default" /> *@
             </div>
         </div>
     </div>
+
+    @* </form> *@
 }
 
 <div>
@@ -55,3 +59,27 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+@* Client Side Validation - Also: Web.config set UnobtrusiveJavaScriptEnabled=true *@
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#ajaxSubmit").click(function () {
+
+            var data = $("#ajaxForm").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "/Home/Create",
+                data: data,
+                success: function (response) {
+
+                }
+            });
+        });
+    });
+</script>

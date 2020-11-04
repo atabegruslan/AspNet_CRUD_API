@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="TravelBlog.Models.Destination" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TravelBlog.Models.Country" Width="1.5" PointX="3.375" PointY="0.75" />
         <AssociationConnector Association="TravelBlog.Models.FK_Destinations_Countries" />
+        <EntityTypeShape EntityType="TravelBlog.Models.User" Width="1.5" PointX="5.75" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

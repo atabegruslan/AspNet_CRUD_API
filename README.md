@@ -48,6 +48,10 @@ More refs:
 - https://www.quora.com/Which-ORM-framework-is-best-for-NET
 - https://stackoverflow.com/questions/657220/which-is-the-best-data-access-framework-approach-for-c-sharp-and-net
 
+# User Accounts, Login: 
+
+- Simplest Example: https://www.c-sharpcorner.com/article/simple-login-application-using-Asp-Net-mvc/
+
 # Publish
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/publish.png)
@@ -56,14 +60,11 @@ More refs:
 
 .NET core: 
 - https://www.youtube.com/playlist?list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU
+- https://www.youtube.com/watch?v=79UWvR734wI
 
 ASP.NET core: 
 - https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio
-
-UAC: 
-- https://www.c-sharpcorner.com/article/simple-login-application-using-Asp-Net-mvc/
-- https://hoanguyenit.com/aspnet-mvc5-login-and-register.html
+- https://www.youtube.com/watch?v=1ck9LIBxO14
 
 AJAX:
 - https://stackoverflow.com/questions/15687903/ajax-web-api-post-method-how-does-it-work
-- https://www.c-sharpcorner.com/UploadFile/dacca2/web-api-with-ajax-understand-post-request-in-web-api/
