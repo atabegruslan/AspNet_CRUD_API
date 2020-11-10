@@ -8,8 +8,6 @@
 
 @using (Html.BeginForm())
 {
-    @* <form id="ajaxForm"> *@
-
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
@@ -44,12 +42,9 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
-                @* <input id="ajaxSubmit" type="button" value="Create" class="btn btn-default" /> *@
             </div>
         </div>
     </div>
-
-    @* </form> *@
 }
 
 <div>
@@ -68,18 +63,22 @@
 <script>
     $(document).ready(function () {
 
-        $("#ajaxSubmit").click(function () {
+        $("input[type=submit]").click(function(e) {
 
-            var data = $("#ajaxForm").serialize();
+            e.preventDefault();
+
+            var data = $("form").serialize();
 
             $.ajax({
                 type: "POST",
                 url: "/Home/Create",
                 data: data,
                 success: function (response) {
-
+                    window.location.href = '/';
                 }
             });
+
+            return false;
         });
     });
 </script>
