@@ -34,6 +34,14 @@
             @Html.DisplayFor(model => model.CountryName)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(@Model.Image)" alt="Image Missing" />
+        </dd>
+
     </dl>
 </div>
 <p>

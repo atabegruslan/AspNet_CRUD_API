@@ -20,6 +20,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CountryId" Type="int" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -63,6 +64,7 @@
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CountryId" Type="Int32" />
           <NavigationProperty Name="Country" Relationship="TravelBlog.Models.FK_Destinations_Countries" FromRole="Destination" ToRole="Country" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DestinationsDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Destinations" EntityType="Self.Destination" />
@@ -110,6 +112,7 @@
           <EntitySetMapping Name="Destinations">
             <EntityTypeMapping TypeName="TravelBlog.Models.Destination">
               <MappingFragment StoreEntitySet="Destinations">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="CountryId" ColumnName="CountryId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

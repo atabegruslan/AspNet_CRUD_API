@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Web;
@@ -47,7 +48,8 @@ namespace TravelBlog.Controllers
                                    Id = d.Id,
                                    Name = d.Name,
                                    Description = d.Description,
-                                   CountryName = d.Country.Name 
+                                   CountryName = d.Country.Name,
+                                   Image = d.Image
                                }).First();
 
             return View(destination);
@@ -68,6 +70,19 @@ namespace TravelBlog.Controllers
         [HttpPost]
         public ActionResult Create([Bind(Exclude ="Id")] Destination destinationToCreate)
         {
+            var imageFile = destinationToCreate.ImageFile;
+
+            if (imageFile != null)
+            {
+                var fileName = Path.GetFileName(imageFile.FileName);
+                var ext = Path.GetExtension(imageFile.FileName);
+                var fileNameNoExt = Path.GetFileNameWithoutExtension(imageFile.FileName);
+
+                var imagePath = "/UploadedImage/" + imageFile.FileName;
+                imageFile.SaveAs(Server.MapPath(imagePath));
+                destinationToCreate.Image = imagePath;
+            }
+
             if (!ModelState.IsValid)
                 return View();
 
