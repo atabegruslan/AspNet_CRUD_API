@@ -19,7 +19,7 @@ namespace TravelBlog.Controllers
         private DestinationsDBEntities _db = new DestinationsDBEntities();
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
             if (Session["UserID"] == null)
             {
@@ -27,8 +27,9 @@ namespace TravelBlog.Controllers
             }
 
             var destinations = (
-                from d in _db.Destinations 
-                //join c in _db.Countries on d.CountryId equals c.Id  /* 2. 2 tables - no FK defined in DB */
+                from d in _db.Destinations
+                    //join c in _db.Countries on d.CountryId equals c.Id  /* 2. 2 tables - no FK defined in DB */
+                where d.Name.StartsWith(search) || search == null 
                 select new DestinationCountry
                 {
                     Id=d.Id,
