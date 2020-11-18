@@ -7,6 +7,7 @@ Full:
 - https://www.youtube.com/playlist?list=PLM5JAv_WpgH_FKWlsGkbiKUczG4BU8mv5
 - https://www.youtube.com/playlist?list=PL6n9fhu94yhVm6S8I2xd6nYz2ZORd7X2v
 - https://www.youtube.com/watch?v=E7Voso411Vs
+- API https://www.youtube.com/playlist?list=PL6n9fhu94yhW7yoUOGNOfHurUE6bpOO2b
 
 # Setup
 
@@ -26,7 +27,9 @@ If you don't have MsSQL server installed, you can still use the local DB server:
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/localDB.png)
 
-Here's how to have MsSQL server and MsSQL server management studio: https://www.guru99.com/download-install-sql-server.html
+Here's how to have MsSQL server and MsSQL server management studio: 
+- https://www.guru99.com/download-install-sql-server.html
+- https://www.youtube.com/watch?v=VfEI7A0i8J4&list=WL&index=1
 
 # ORM
 

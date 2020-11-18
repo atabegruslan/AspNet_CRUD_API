@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Configuration;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
@@ -175,6 +179,25 @@ namespace TravelBlog.Controllers
             }
 
             return View(user);
+        }
+
+        public void SendEmail()
+        { // This is just a simple email test. Go to: domain/Home/SendEmail
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential(ConfigurationManager.AppSettings["smtpUserEmail"].ToString(), ConfigurationManager.AppSettings["smtpPassword"].ToString());
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            MailMessage mailMessage = new MailMessage("travellers_net@noreply.com", "ruslan_aliyev_@hotmail.com", "Dummy Subject", "Dummy Body");
+
+            try
+            {
+                client.Send(mailMessage);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

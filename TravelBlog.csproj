@@ -191,6 +191,7 @@
     <Content Include="Models\DestinationsDBModel.edmx.diagram">
       <DependentUpon>DestinationsDBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Email.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
