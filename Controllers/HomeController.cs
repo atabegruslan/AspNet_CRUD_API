@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
+using TravelBlog.Common;
 using TravelBlog.Models;
 using TravelBlog.ViewModels;
 
@@ -19,6 +20,7 @@ namespace TravelBlog.Controllers
         private DestinationsDBEntities _db = new DestinationsDBEntities();
 
         // GET: Home
+        [TrackAccess]
         public ActionResult Index(string search)
         {
             if (Session["UserID"] == null)
@@ -199,6 +201,12 @@ namespace TravelBlog.Controllers
             {
 
             }
+        }
+
+        [TrackAccess]
+        public void IntentionalException()
+        {
+            throw new Exception("Intentional Exception");
         }
     }
 }
