@@ -40,6 +40,7 @@ In this project EF is used for ORM
 
 - An example of DB first: https://www.entityframeworktutorial.net/entityframework6/create-entity-data-model.aspx
 - An example of linking Code and DB without using the wizard: https://github.com/atabegruslan/ASP-NET-MVC-Entity
+- https://www.youtube.com/watch?v=qkJ9keBmQWo
 
 ADO.NET is the traditional method to help access DB with C#.
 
@@ -65,6 +66,8 @@ More refs:
 .NET core: 
 - https://www.youtube.com/playlist?list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU
 - https://www.youtube.com/watch?v=79UWvR734wI
+- https://www.youtube.com/watch?v=Dpv6lUKNL9o
+  - https://www.youtube.com/watch?v=4a9VxZjnT7E
 
 ASP.NET core: 
 - https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio
