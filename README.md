@@ -68,6 +68,7 @@ More refs:
 ASP.NET core: 
 - https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio
 - https://www.youtube.com/watch?v=1ck9LIBxO14
+- https://www.youtube.com/playlist?list=PL2Q8rFbm-4ruplp2SRUTQjZaFfxh-knS0
 
 AJAX:
 - https://stackoverflow.com/questions/15687903/ajax-web-api-post-method-how-does-it-work
