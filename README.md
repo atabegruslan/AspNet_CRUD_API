@@ -17,6 +17,7 @@ Full:
 
 - Have .NET Framework 4.x.x installed first: https://www.microsoft.com/en-us/download/details.aspx?id=30653
 - Visual Studio 2019 version https://visualstudio.microsoft.com/downloads/
+  - Better usage: https://www.youtube.com/watch?v=ifTF3ags0XI
 - Install VS features
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/Download%20VS%20features.png)
