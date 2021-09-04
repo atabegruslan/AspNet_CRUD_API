@@ -42,7 +42,13 @@ In this project EF is used for ORM
 - An example of linking Code and DB without using the wizard: https://github.com/atabegruslan/ASP-NET-MVC-Entity
 - https://www.youtube.com/watch?v=qkJ9keBmQWo
 
-ADO.NET is the traditional method to help access DB with C#.
+## Various ORMs
+
+- As of 2020, the ORM "in-fashion" is the **Entity Framework**. 
+- **Linq** is more like Repository and Unit Of Work patterns.
+- **ADO.NET** is the traditional method to help access DB with C#. It's like a middleware library. It have 2 kinds: 
+  - Use Query method,
+  - Use dataadapter, Dataset, to bind datatable with Database.
 
 More refs:
 - https://www.dotnettricks.com/learn/entityframework/difference-between-linq-to-sql-and-entity-framework
