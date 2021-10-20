@@ -67,6 +67,69 @@ More refs:
 
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/publish.png)
 
+# Opening existing projects
+
+Open the `.sln` file
+
+# API
+
+1. Top bar -> Tools -> Nuget Package Manager -> Package Manager Console: `PM> Install-Package Microsoft.AspNet.WebApi`
+
+2. Add to `Global.asax`:
+
+```
+...
+using System.Web.Http; // <- ADD
+
+public class MvcApplication : System.Web.HttpApplication
+{
+    protected void Application_Start()
+    {
+        ...
+        GlobalConfiguration.Configure(WebApiConfig.Register); // <- ADD
+        ...
+```
+
+3. `App_Start/WebApiConfig.cs`
+
+```
+public static class WebApiConfig
+{
+    public static void Register(HttpConfiguration config)
+    {
+        config.MapHttpAttributeRoutes();
+
+        config.Routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { id = RouteParameter.Optional }
+        );
+    }
+}
+```
+
+4. Create a new API controller:
+
+Right click controllers folder -> add -> controller -> Web API 2 Controller
+
+```
+[RoutePrefix("Api/Destinations")]
+public class RestApiController : ApiController
+{
+    [HttpGet]
+    [Route("Test")]
+    public string Test()
+    {
+        return "Welcome To Web API blah blah";
+    }
+```
+
+5. Visit `https://localhost:{port}/Api/Destinations/Test`
+
+- https://stackoverflow.com/questions/11990036/how-to-add-web-api-to-an-existing-asp-net-mvc-4-web-application-project
+- https://www.c-sharpcorner.com/article/create-simple-web-api-in-asp-net-mvc/
+- https://www.codingvila.com/2021/05/angular-12-crud-example-with-web-api.html?m=1
+
 # More Tutorials
 
 .NET core: 
