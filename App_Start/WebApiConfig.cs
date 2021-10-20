@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace TravelBlog
 {
@@ -16,6 +17,9 @@ namespace TravelBlog
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var cors = new EnableCorsAttribute("*", "*", "*");//origins,headers,methods 
+            config.EnableCors(cors);
         }
     }
 }
