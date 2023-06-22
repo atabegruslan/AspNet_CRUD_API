@@ -39,7 +39,7 @@ In this project EF is used for ORM
 ![](https://raw.githubusercontent.com/atabegruslan/TravellersNet/master/Illustrations/EF.PNG)
 
 - An example of DB first: https://www.entityframeworktutorial.net/entityframework6/create-entity-data-model.aspx
-- An example of linking Code and DB without using the wizard: https://github.com/atabegruslan/ASP-NET-MVC-Entity
+- An example of linking Code and DB without using the wizard: https://github.com/Ruslan-Aliyev/AspNet_MVC_EF
 - https://www.youtube.com/watch?v=qkJ9keBmQWo
 
 ## Various ORMs
